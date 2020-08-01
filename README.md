@@ -1,2 +1,2 @@
-# matlib
+# Patrix
 Matrix Library

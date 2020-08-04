@@ -1,3 +1,7 @@
+def matrix(r, c):
+    return [[0 for _ in range(c)] for _ in range(r)]
+
+
 def shape(mat):
     r = len(mat)
     c = len(mat[0])
@@ -5,8 +9,22 @@ def shape(mat):
     return r, c
 
 
-def matrix(r, c):
-    return [[0 for _ in range(c)] for _ in range(r)]
+def main_diagonal(mat):
+    dia = []
+    col = 0
+    for row in mat:
+        dia.append(row[col])
+        col += 1
+    return dia
+
+
+def anti_diagonal(mat):
+    dia = []
+    col = len(mat[0]) - 1
+    for row in mat:
+        dia.append(row[col])
+        col -= 1
+    return dia
 
 
 def windows(mat, r, c):
